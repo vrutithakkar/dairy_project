@@ -1,9 +1,39 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block content %}
 
-<div class="card p-4 shadow">
-    <h3>Welcome to Dairy Management System</h3>
-    <p>Select option from menu.</p>
+<h1 class="text-center mb-5 fw-bold">Welcome to Smart Dairy Dashboard 🐄</h1>
+
+<div class="row g-4">
+
+    <div class="col-md-3">
+        <div class="dashboard-card card-farmers">
+            <h3>👨‍🌾 Farmers</h3>
+            <p>Manage farmer records</p>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="dashboard-card card-animals">
+            <h3>🐄 Animals</h3>
+            <p>Track livestock details</p>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="dashboard-card card-products">
+            <h3>🥛 Products</h3>
+            <p>Milk & dairy products</p>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="dashboard-card card-bills">
+            <h3>💰 Bills</h3>
+            <p>View transactions</p>
+        </div>
+    </div>
+
 </div>
 
 {% endblock %}
+
