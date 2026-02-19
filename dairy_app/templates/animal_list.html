@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>Animal List</h3>
+<a href="add/" class="btn btn-primary mb-2">Add Animal</a>
+
+<table class="table table-bordered">
+<tr>
+<th>ID</th>
+<th>Type</th>
+<th>Age</th>
+<th>Milk Per Day</th>
+</tr>
+
+{% for i in data %}
+<tr>
+<td>{{ i.id }}</td>
+<td>{{ i.type }}</td>
+<td>{{ i.age }}</td>
+<td>{{ i.milk_per_day }}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,183 @@
+/* =========================
+   DAIRY MANAGEMENT SYSTEM CSS
+========================= */
+
+/* ---------- GENERAL ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("/static/images/mainimg.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    color: #222 !important; /* default text color dark */
+}
+
+/* overlay to make text visible */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: -1;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background: #2e7d32;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ---------- MENU ---------- */
+nav {
+    background: #43a047;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white !important;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: yellow !important;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    width: 85%;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- TABLE ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white !important;
+    color: #000 !important; /* ensure all table text black */
+}
+
+table th, table td {
+    text-align: center;
+    padding: 10px;
+}
+
+table th {
+    background: #2c7a3f !important;
+    color: white !important;
+}
+
+table td {
+    border-bottom: 1px solid #ddd;
+    color: #000 !important; /* force black text */
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ---------- BUTTON ---------- */
+button, .btn {
+    padding: 8px 15px;
+    background: #2c7a3f !important;
+    color: white !important;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+button:hover, .btn:hover {
+    background: #1e5c2e !important;
+}
+
+/* ---------- FORM ---------- */
+form {
+    width: 60%;
+    margin: auto;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #2c7a3f;
+    box-shadow: 0 0 5px rgba(44, 122, 63, 0.3);
+}
+
+/* ---------- TITLES ---------- */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c7a3f;
+    font-weight: bold;
+}
+
+/* ---------- LINKS ---------- */
+a {
+    color: #007bff !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #2c7a3f !important;
+}
+
+/* ---------- FORCE TEXT COLOR ---------- */
+body, p, span, label, td, th {
+    color: #000 !important;
+}
+
+/* ---------- SPECIFIC FIX FOR BILL TABLE (or any table) ---------- */
+table.bill-table td, table.bill-table th {
+    color: inherit !important;       /* force black text in bills */
+    background-color: inherit !important; /* keep white background */
+}
+
+/* ---------- RESPONSIVE TABLES ---------- */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    nav a {
+        display: block;
+        margin-bottom: 8px;
+    }
+}
+/* Force all table text black and proper background */
+table, table th, table td {
+    color: #000 !important;        /* black text */
+    background-color: #fff !important; /* white background for cells */
+}
+
+/* Table header */
+table th {
+    background-color: #2c7a3f !important; /* green header */
+    color: #fff !important;               /* white header text */
+}
+
+/* Table row hover */
+table tr:hover {
+    background-color: #f1f1f1 !important;
+}

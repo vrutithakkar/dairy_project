@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>Bill List</h3>
+<a href="add/" class="btn btn-primary mb-2">Add Bill</a>
+
+<table class="table table-bordered">
+<tr>
+<th>ID</th>
+<th>Customer</th>
+<th>Amount</th>
+</tr>
+
+{% for i in data %}
+<tr>
+<td>{{ i.id }}</td>
+<td>{{ i.customer }}</td>
+<td>{{ i.amount }}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

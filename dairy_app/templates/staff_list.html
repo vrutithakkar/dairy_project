@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>Staff List</h3>
+<a href="add/" class="btn btn-primary mb-2">Add Staff</a>
+
+<table class="table table-bordered">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Phone</th>
+<th>Salary</th>
+</tr>
+
+{% for i in data %}
+<tr>
+<td>{{ i.id }}</td>
+<td>{{ i.name }}</td>
+<td>{{ i.phone }}</td>
+<td>{{ i.salary }}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}
