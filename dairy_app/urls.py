@@ -2,7 +2,12 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.home, name="home"),
+    path('', views.index, name="index"),
+    path('dashboard/', views.home, name="home"),
+
+    # auth (only login/logout)
+    path('login/', views.user_login, name='login'),
+    path('logout/', views.user_logout, name='logout'),
 
     path('farmers/', views.farmer_list, name="farmer_list"),
     path('farmers/add/', views.add_farmer, name="add_farmer"),

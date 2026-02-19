@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="d-flex justify-content-center align-items-center" style="min-height:70vh">
+  <div class="card p-4 shadow" style="max-width:380px; width:100%">
+    <h4 class="mb-3 text-center">Sign in</h4>
+    <p class="text-muted small">Use default credentials: <strong>admin</strong> / <strong>admin@123</strong></p>
+    <form method="post">
+      {% csrf_token %}
+      {% if form.non_field_errors %}
+      <div class="mb-3">
+        <div class="alert alert-danger">{{ form.non_field_errors }}</div>
+      </div>
+      {% endif %}
+      <div class="mb-3">
+        {{ form.username }}
+      </div>
+      <div class="mb-3">
+        {{ form.password }}
+      </div>
+      <div class="d-grid">
+        <button class="btn btn-success">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
