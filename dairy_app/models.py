@@ -13,6 +13,7 @@ class Farmer(models.Model):
 # Staff
 class Staff(models.Model):
     name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=15, default='')
     role = models.CharField(max_length=100)
     salary = models.IntegerField()
 

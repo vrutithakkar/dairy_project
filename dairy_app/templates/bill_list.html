@@ -21,8 +21,8 @@
 					{% for i in data %}
 					<tr>
 						<td>{{ i.id }}</td>
-						<td>{{ i.customer }}</td>
-						<td>{{ i.amount }}</td>
+						<td>{{ i.farmer.name }}</td>
+						<td>{{ i.total_amount }}</td>
 					</tr>
 					{% endfor %}
 				</tbody>
